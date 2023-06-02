@@ -7,4 +7,4 @@ namespace HRPlus.Application.Contracts.Presistence
 
     }
 }
-}
+
