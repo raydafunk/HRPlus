@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HRPlus.Application.Contracts.Presistence;
+using HRPlus.Application.Expections;
 using MediatR;
 
 namespace HRPlus.Application.Features.LeaveType.Queries.GetLeaveTpyesDetails
@@ -16,7 +17,12 @@ namespace HRPlus.Application.Features.LeaveType.Queries.GetLeaveTpyesDetails
         }
         public async Task<LeaveTypeDetailsDto> Handle(GetLeaveTypeDetailsQuery request, CancellationToken cancellationToken)
         {
+            // call the database 
             var leaveTypeDetails  = await _leaveTypeRepository.GetByIdAsync(request.Id);
+             
+            // verfiy the results 
+            if (leaveTypeDetails == null)
+             throw new NotFoundExpection(nameof(leaveTypeDetails), request.Id);
 
             var leaveTypeDtailsData = _mapper.Map<LeaveTypeDetailsDto>(leaveTypeDetails);
 
