@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using HRPlus.Application.Contracts.Presistence;
+using HRPlus.Application.Expections;
 using MediatR;
 
 namespace HRPlus.Application.Features.LeaveType.Commands.CreateLeaveType
@@ -16,6 +17,12 @@ namespace HRPlus.Application.Features.LeaveType.Commands.CreateLeaveType
         }
         public async Task<int> Handle(CreateLeaveTypeCommand request, CancellationToken cancellationToken)
         {
+            // validate incoming data 
+            var validator = new CreateleaveTypeCommandVaildator(_leaveTypeRepository);
+            var validationResult = await validator.ValidateAsync(request);
+
+            if (validationResult.Errors.Any())
+                throw new BedRequestExepection("Invalid leaveTypes please check the leave type", validationResult);
             // convert
             var leavetypeToCreate = _mapper.Map<Domain.LeaveType>(request);
 
