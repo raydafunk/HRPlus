@@ -13,9 +13,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{FC47D943-F
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "infrastructure", "infrastructure", "{5660E2C8-34FB-4C07-8694-89A67105004A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRPlus.Domain", "HRPlus.Domain\HRPlus.Domain.csproj", "{CE0D2032-358A-4DAB-9E62-A0D9F5E20D36}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRPlus.Domain", "HRPlus.Domain\HRPlus.Domain.csproj", "{CE0D2032-358A-4DAB-9E62-A0D9F5E20D36}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRPlus.Application", "HRPlus.Application\HRPlus.Application.csproj", "{B5F8D3A4-0805-4367-95F4-2A3010B69DB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRPlus.Application", "HRPlus.Application\HRPlus.Application.csproj", "{B5F8D3A4-0805-4367-95F4-2A3010B69DB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRPlus.Presistance", "HRPlus.Presistance\HRPlus.Presistance.csproj", "{E46AB7E7-CFE4-4EA9-9E51-26C92D6BABBC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{B5F8D3A4-0805-4367-95F4-2A3010B69DB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B5F8D3A4-0805-4367-95F4-2A3010B69DB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B5F8D3A4-0805-4367-95F4-2A3010B69DB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E46AB7E7-CFE4-4EA9-9E51-26C92D6BABBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E46AB7E7-CFE4-4EA9-9E51-26C92D6BABBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E46AB7E7-CFE4-4EA9-9E51-26C92D6BABBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E46AB7E7-CFE4-4EA9-9E51-26C92D6BABBC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -41,6 +47,7 @@ Global
 		{5660E2C8-34FB-4C07-8694-89A67105004A} = {941AFDDF-99AC-4022-97D6-298821E62AF4}
 		{CE0D2032-358A-4DAB-9E62-A0D9F5E20D36} = {FC47D943-F341-435B-9584-BD457015FEBD}
 		{B5F8D3A4-0805-4367-95F4-2A3010B69DB1} = {FC47D943-F341-435B-9584-BD457015FEBD}
+		{E46AB7E7-CFE4-4EA9-9E51-26C92D6BABBC} = {5660E2C8-34FB-4C07-8694-89A67105004A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B39A5218-DB58-4BC0-82A4-26D0736DB2FA}
