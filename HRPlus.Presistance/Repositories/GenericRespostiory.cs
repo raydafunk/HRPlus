@@ -1,10 +1,11 @@
 ﻿using HRPlus.Application.Contracts.Presistence;
+using HRPlus.Domain.Common;
 using HRPlus.Presistance.DatabaaseContext;
 using Microsoft.EntityFrameworkCore;
 
 namespace HRPlus.Presistance.Repositories
 {
-    public class GenericRespostiory<T> : IGenericRepository<T> where T : class
+    public class GenericRespostiory<T> : IGenericRepository<T> where T : BaseEntity
     {
         protected  readonly HRPlusDbContext _context;
 
@@ -26,13 +27,15 @@ namespace HRPlus.Presistance.Repositories
 
         public async Task<IReadOnlyList<T>> GetAsync()
         {
-           return await _context.Set<T>().ToListAsync();
+           return await _context.Set<T>().AsNoTracking().ToListAsync();
         }
 
         public async Task<T> GetByIdAsync(int id)
         {
-            return await _context.Set<T>().FindAsync(id);
-        }
+            return await _context.Set<T>()
+                .AsNoTracking()
+                .FirstOrDefaultAsync(q => q.Id== id);
+        }   
 
         public async Task UpdateAsync(T entity)
         {

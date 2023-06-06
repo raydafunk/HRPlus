@@ -1,6 +1,8 @@
-﻿namespace HRPlus.Application.Contracts.Presistence
+﻿using HRPlus.Domain.Common;
+
+namespace HRPlus.Application.Contracts.Presistence
 {
-    public interface IGenericRepository<T> where T : class
+    public interface IGenericRepository<T> where T : BaseEntity
     {
         Task<IReadOnlyList<T>> GetAsync();
         Task<T> GetByIdAsync(int id);
