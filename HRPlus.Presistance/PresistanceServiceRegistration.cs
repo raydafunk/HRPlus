@@ -1,4 +1,6 @@
-﻿using HRPlus.Presistance.DatabaaseContext;
+﻿using HRPlus.Application.Contracts.Presistence;
+using HRPlus.Presistance.DatabaaseContext;
+using HRPlus.Presistance.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,6 +14,11 @@ public static class PresistanceServiceRegistration
         {
             options.UseSqlServer(configuration.GetConnectionString("HrPlusDatabaseConnectionString"));
         });
+        services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRespostiory<>));
+        services.AddScoped<ILeaveTypeRepository, LeaveTypeRepository>();
+        services.AddScoped<ILeaveAllocationRepository, LeaveAllocationRepository>();
+        services.AddScoped<ILeaveRequestRepository, LeaveRequestRepository>();
+
         return services;
     }
 }

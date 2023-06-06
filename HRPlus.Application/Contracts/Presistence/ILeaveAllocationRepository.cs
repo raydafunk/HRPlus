@@ -2,7 +2,7 @@
 
 namespace HRPlus.Application.Contracts.Presistence
 {
-    public interface ILeaveAllocationTypeRepository : IGenericRepository<LeaveAllocation>
+    public interface ILeaveAllocationRepository : IGenericRepository<LeaveAllocation>
     {
 
     }

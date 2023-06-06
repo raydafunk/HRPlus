@@ -5,7 +5,7 @@ using System.Reflection.Emit;
 
 namespace HRPlus.Presistance.Configurations
 {
-    public class leaveTypeConfigruations : IEntityTypeConfiguration<LeaveType>
+    public class LeaveTypeConfigruations : IEntityTypeConfiguration<LeaveType>
     {
         public void Configure(EntityTypeBuilder<LeaveType> builder)
         {
