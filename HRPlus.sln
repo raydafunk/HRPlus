@@ -17,7 +17,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRPlus.Domain", "HRPlus.Dom
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRPlus.Application", "HRPlus.Application\HRPlus.Application.csproj", "{B5F8D3A4-0805-4367-95F4-2A3010B69DB1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRPlus.Presistance", "HRPlus.Presistance\HRPlus.Presistance.csproj", "{E46AB7E7-CFE4-4EA9-9E51-26C92D6BABBC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HRPlus.Presistance", "HRPlus.Presistance\HRPlus.Presistance.csproj", "{E46AB7E7-CFE4-4EA9-9E51-26C92D6BABBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRPlus.Infrastructure", "HRPlus.Infrastructure\HRPlus.Infrastructure.csproj", "{8125D148-59E9-4D79-87E1-887B7B34B9E4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +39,10 @@ Global
 		{E46AB7E7-CFE4-4EA9-9E51-26C92D6BABBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E46AB7E7-CFE4-4EA9-9E51-26C92D6BABBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E46AB7E7-CFE4-4EA9-9E51-26C92D6BABBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8125D148-59E9-4D79-87E1-887B7B34B9E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8125D148-59E9-4D79-87E1-887B7B34B9E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8125D148-59E9-4D79-87E1-887B7B34B9E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8125D148-59E9-4D79-87E1-887B7B34B9E4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +54,7 @@ Global
 		{CE0D2032-358A-4DAB-9E62-A0D9F5E20D36} = {FC47D943-F341-435B-9584-BD457015FEBD}
 		{B5F8D3A4-0805-4367-95F4-2A3010B69DB1} = {FC47D943-F341-435B-9584-BD457015FEBD}
 		{E46AB7E7-CFE4-4EA9-9E51-26C92D6BABBC} = {5660E2C8-34FB-4C07-8694-89A67105004A}
+		{8125D148-59E9-4D79-87E1-887B7B34B9E4} = {5660E2C8-34FB-4C07-8694-89A67105004A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B39A5218-DB58-4BC0-82A4-26D0736DB2FA}
