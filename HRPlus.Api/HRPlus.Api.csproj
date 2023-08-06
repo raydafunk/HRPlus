@@ -21,4 +21,8 @@
     <ProjectReference Include="..\HRPlus.Presistance\HRPlus.Presistance.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
 </Project>
