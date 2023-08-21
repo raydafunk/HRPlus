@@ -1,3 +1,4 @@
+using HRPlus.Application;
 using HRPlus.Infrastructure;
 using HRPlus.Presistance;
 
@@ -6,6 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddApplicationServices();
 builder.Services.AddInfrastructureServices(builder.Configuration);
 builder.Services.AddPresistenceServices(builder.Configuration);
 

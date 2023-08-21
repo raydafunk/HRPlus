@@ -5,12 +5,12 @@ using MediatR;
 
 namespace HRPlus.Application.Features.LeaveType.Commands.CreateLeaveType
 {
-    internal class CreateLeaveTypeHandler : IRequestHandler<CreateLeaveTypeCommand, int>
+    public class CreateLeaveTypeCommandHandler : IRequestHandler<CreateLeaveTypeCommand, int>
     {
         private readonly IMapper _mapper;
         private readonly ILeaveTypeRepository _leaveTypeRepository;
 
-        public CreateLeaveTypeHandler(IMapper mapper, ILeaveTypeRepository leaveTypeRepository)
+        public CreateLeaveTypeCommandHandler(IMapper mapper, ILeaveTypeRepository leaveTypeRepository)
         {
             this._mapper = mapper;
             this._leaveTypeRepository = leaveTypeRepository;
