@@ -18,4 +18,10 @@
     <ProjectReference Include="..\HRPlus.Domain\HRPlus.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\LeaveAllocation\Commands\CreateLeaveAllocation\" />
+    <Folder Include="Features\LeaveAllocation\Commands\DeleteLeaveAllocation\" />
+    <Folder Include="Features\LeaveAllocation\Commands\UpdateLeaveAllocation\" />
+  </ItemGroup>
+
 </Project>

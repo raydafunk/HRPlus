@@ -16,5 +16,6 @@ namespace HRPlus.Application.MappingProfile
             CreateMap<CreateLeaveTypeCommand, LeaveType>();
             CreateMap<UpdateLeaveTypeCommand, LeaveType>();
         }
+
     }
 }
