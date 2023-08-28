@@ -17,7 +17,7 @@ namespace HRPlus.Application.Features.LeaveType.Commands.DeleteLeaveType
 
             // very the new records 
             if( LeaveTypeToDeleate == null)
-               throw new NotFoundExpection(nameof(LeaveTypeToDeleate), request.Id);
+               throw new NotFoundException(nameof(LeaveTypeToDeleate), request.Id);
 
             await _leaveTypeRepository.DeleteAsync(LeaveTypeToDeleate);
 

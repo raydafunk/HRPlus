@@ -2,4 +2,4 @@
 
 namespace HRPlus.Application.Features.LeaveAllocation.Queries.GetAllLeaveAllocations;
 
-public record GetLeaveAllocationListQuery : IRequest<List<GetAllLeaveAllocationDto>>;
+public record GetLeaveAllocationListQuery : IRequest<List<LeaveAllocationDto>>;

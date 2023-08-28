@@ -29,7 +29,7 @@ namespace HRPlus.Application.Features.LeaveAllocation.Commands.UpdateLeaveAlloca
             var LeaveAllocatonRequest = await _leaveAllocationRepository.GetByIdAsync(request.Id);
 
             if (LeaveAllocatonRequest is null)
-                throw  new NotFoundExpection(nameof(LeaveAllocatonRequest), request.Id);
+                throw  new NotFoundException(nameof(LeaveAllocatonRequest), request.Id);
 
             _mapper.Map(request, LeaveAllocatonRequest);
 

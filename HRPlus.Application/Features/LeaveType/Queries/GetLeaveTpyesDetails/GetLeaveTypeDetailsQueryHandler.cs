@@ -22,7 +22,7 @@ namespace HRPlus.Application.Features.LeaveType.Queries.GetLeaveTpyesDetails
              
             // verfiy the results 
             if (leaveTypeDetails == null)
-             throw new NotFoundExpection(nameof(leaveTypeDetails), request.Id);
+             throw new NotFoundException(nameof(leaveTypeDetails), request.Id);
 
             var leaveTypeDtailsData = _mapper.Map<LeaveTypeDetailsDto>(leaveTypeDetails);
 

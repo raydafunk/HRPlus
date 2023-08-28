@@ -18,8 +18,4 @@
     <ProjectReference Include="..\HRPlus.Domain\HRPlus.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\LeaveAllocation\Commands\DeleteLeaveAllocation\" />
-  </ItemGroup>
-
 </Project>

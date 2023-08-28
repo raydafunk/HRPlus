@@ -11,7 +11,7 @@ namespace HRPlus.Application.MappingProfile
     {
         public LeaveAllocationProfile()
         {
-            CreateMap<GetAllLeaveAllocationDto, LeaveAllocation>().ReverseMap();
+            CreateMap<LeaveAllocationDto, LeaveAllocation>().ReverseMap();
             CreateMap<LeaveAllocation, LeaveAllocationDetailsDto>();
             CreateMap<CreateLeaveAllocationCommand, LeaveType>();
             CreateMap<UpdateLeaveAllocationCommand, LeaveType>();
