@@ -22,7 +22,7 @@ namespace HRPlus.Application.Features.LeaveType.Commands.CreateLeaveType
             var validationResult = await validator.ValidateAsync(request);
 
             if (validationResult.Errors.Any())
-                throw new BedRequestExepection("Invalid leaveTypes please check the leave type", validationResult);
+                throw new BadRequestException("Invalid leaveTypes please check the leave type", validationResult);
             // convert
             var leavetypeToCreate = _mapper.Map<Domain.LeaveType>(request);
 

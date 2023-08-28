@@ -29,7 +29,7 @@ namespace HRPlus.Application.Features.LeaveType.Commands.UpdateLeaveType
             if (validationResult.Errors.Any())
             {
                 _logger.LogWarning(" Validation Errors in update request for {0} - {1}", nameof(LeaveType), request.Id);
-                throw new BedRequestExepection("Invalid leaveTypes please check the leave type", validationResult);
+                throw new BadRequestException("Invalid leaveTypes please check the leave type", validationResult);
             }
 
             var LeaveTypeToUpdate = _mapper.Map<Domain.LeaveType>(request);

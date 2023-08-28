@@ -2,14 +2,14 @@
 
 namespace HRPlus.Application.Expections
 {
-    public class BedRequestExepection : Exception
+    public class BadRequestException : Exception
     {
-        public BedRequestExepection(string massage) : base(massage)
+        public BadRequestException(string massage) : base(massage)
         {
 
         }
         
-        public BedRequestExepection(string message, ValidationResult validationResult) : base(message)
+        public BadRequestException(string message, ValidationResult validationResult) : base(message)
         {
             VaildationErrors = new();
             foreach (var error in validationResult.Errors)
