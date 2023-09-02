@@ -6,9 +6,9 @@ namespace HRPlus.Application.Contracts.Presistence
     {
         Task<LeaveRequest> GetLeaveRequestWithDetails(int id);
 
-        Task<List<LeaveRequest>> GetLeaveRequestWithDeatails();
+        Task<List<LeaveRequest>> GetLeaveRequestWithDetails();
 
-        Task<List<LeaveRequest>> GeetLeaveRequestWithDetails(string userId);
+        Task<List<LeaveRequest>> GetLeaveRequestWithDetails(string userId);
     }
 }
 
