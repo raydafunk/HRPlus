@@ -24,7 +24,7 @@ namespace HRPlus.Application.Features.LeaveRequest.Queries.GetLeaveRequestList
         {
             //to do check if to see if employee is logged in 
 
-            var LeaveRequestReturnObject = await _leaveRequestRepository.GetLeaveRequestWithDeatails();
+            var LeaveRequestReturnObject = await _leaveRequestRepository.GetLeaveRequestWithDetails();
             var leaveRequests = _mapper.Map<List<LeaveRequestListDto>>(LeaveRequestReturnObject);
 
 

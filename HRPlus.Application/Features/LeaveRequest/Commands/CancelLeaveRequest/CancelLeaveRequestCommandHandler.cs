@@ -19,16 +19,23 @@ namespace HRPlus.Application.Features.LeaveRequest.Commands.CancelLeaveRequest
         
         public async Task<Unit> Handle(CancelLeaveRequestCommand request, CancellationToken cancellationToken)
         {
-            
+
             var leaveRequestObject = await _leaveRequestRepository.GetByIdAsync(request.Id);
 
-            if(leaveRequestObject is null)
+            if (leaveRequestObject is null)
                 throw new NotFoundException(nameof(leaveRequestObject), request.Id);
 
             leaveRequestObject.Canceled = true;
 
-            // Re-evalutae the employee's allocations for the leave Type
+            //  If already Apporved,re-evalutae the employee's allocations for the leave Type
 
+            await SendEmaillConfromation(leaveRequestObject);
+
+            return Unit.Value;
+        }
+
+        private async Task SendEmaillConfromation(Domain.LeaveRequest? leaveRequestObject)
+        {
             // send confirmation email
             try
             {
@@ -45,8 +52,6 @@ namespace HRPlus.Application.Features.LeaveRequest.Commands.CancelLeaveRequest
             {
                 // log error
             }
-
-            return Unit.Value;
         }
     }
 }

@@ -4,7 +4,6 @@ using HRPlus.Application.Contracts.Email;
 using HRPlus.Application.Contracts.Logging;
 using HRPlus.Application.Contracts.Presistence;
 using HRPlus.Application.Expections;
-using HRPlus.Application.Features.LeaveRequest.UpdateLeaveRequest;
 using HRPlus.Application.Models.Email;
 using MediatR;
 

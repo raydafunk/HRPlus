@@ -20,15 +20,15 @@ namespace HRPlus.Api.Controllers
 
         // GET: api/<LeaveAllocationController>
         [HttpGet]
-        public async Task<ActionResult<List<LeaveAllocationDto>>>GetAllLeaveAllcationTypes(bool isLoggedInUser = false)
+        public async Task<ActionResult<List<LeaveAllocationDto>>> GetAllLeaveAllcationTypes(bool isLoggedInUser = false)
         {
-            var leaveAllocationRequest = await _mediator.Send( new GetLeaveAllocationListQuery());
+            var leaveAllocationRequest = await _mediator.Send(new GetLeaveAllocationListQuery());
             return Ok(leaveAllocationRequest);
         }
 
         // GET: api/<LeaveAllocationController>/5
-        [HttpGet]
-        public async Task<ActionResult<List<LeaveAllocationDto>>> GetAllLeaveAllcationTypesByID(int id)
+        [HttpGet("{id}")]
+        public async Task<ActionResult<List<LeaveAllocationDto>>>GetAllLeaveAllcationTypesByID(int id)
         {
             var leaveAllocationRequest = await _mediator.Send(new GetLeaveAllocationListQuery());
             return Ok(leaveAllocationRequest);

@@ -16,7 +16,7 @@ namespace HRPlus.Application.Features.LeaveRequest.Commands.CreateLeaveRequest
         public CreateLeaveRequestCommandValidator(ILeaveTypeRepository leaveTypeRepository )
         {
             _leaveTypeRepository = leaveTypeRepository;
-            Include(new BaseLeaveRequestValidator(_leaveTypeRepository))
+            Include(new BaseLeaveRequestValidator(_leaveTypeRepository));
         }
     }
 }

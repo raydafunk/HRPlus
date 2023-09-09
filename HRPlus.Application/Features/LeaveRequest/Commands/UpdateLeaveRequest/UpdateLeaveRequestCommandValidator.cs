@@ -29,7 +29,7 @@ namespace HRPlus.Application.Features.LeaveRequest.Commands.UpdateLeaveRequest
 
         private async Task<bool> LeaveRequestMustExit(int Id, CancellationToken arg2)
         {
-            var leaveAllocationRequest = await _leaveRequestRepository.GetByIdAsync(id);
+            var leaveAllocationRequest = await _leaveRequestRepository.GetByIdAsync(Id);
             return leaveAllocationRequest != null;
         }
     }
