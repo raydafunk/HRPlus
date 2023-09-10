@@ -10,10 +10,10 @@ namespace HRPlus.Application.Features.LeaveAllocation.Commands.CreateLeaveAlloca
 {
     public class CreateLeaveAllocationCommandValidator : AbstractValidator<CreateLeaveAllocationCommand>
     {
-        private readonly ILeaveTypeRepository _LeaveTypeRepository;
+        private readonly ILeaveTypeRepository _leaveTypeRepository;
         public CreateLeaveAllocationCommandValidator(ILeaveTypeRepository leaveTypeRepository)
         {
-            _LeaveTypeRepository = leaveTypeRepository;
+            _leaveTypeRepository = leaveTypeRepository;
 
             RuleFor(p => p.LeaveTypeId)
                 .GreaterThan(0)
@@ -23,7 +23,7 @@ namespace HRPlus.Application.Features.LeaveAllocation.Commands.CreateLeaveAlloca
 
         private async Task<bool> LeaveTypeMustExits(int id, CancellationToken arg2)
         {
-           var leaveType = await _LeaveTypeRepository.GetByIdAsync(id);
+           var leaveType = await _leaveTypeRepository.GetByIdAsync(id);
             return leaveType != null;
         }
     }

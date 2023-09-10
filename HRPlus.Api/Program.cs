@@ -1,3 +1,4 @@
+using HRPlus.Api.Middleware;
 using HRPlus.Application;
 using HRPlus.Infrastructure;
 using HRPlus.Presistance;
@@ -25,6 +26,7 @@ builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
+app.UseMiddleware<ExceptionMiddleware>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

@@ -14,8 +14,8 @@ namespace HRPlus.Application.Features.LeaveAllocation.Commands.CreateLeaveAlloca
         public CreateleaveAllocationHandler(IMapper mapper, ILeaveAllocationRepository leaveAllocationRepository, ILeaveTypeRepository leaveTypeRepository)
         {
             _mapper = mapper;
-            _leaveAllocationRepository = leaveAllocationRepository;
-            _leaveTypeRepository = leaveTypeRepository;
+            this._leaveAllocationRepository = leaveAllocationRepository;
+            this._leaveTypeRepository = leaveTypeRepository;
         }
         
 
