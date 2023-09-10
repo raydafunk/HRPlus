@@ -12,7 +12,8 @@ namespace HRPlus.Application.Features.LeaveType.Queries.GetAllLeaveTypes
         private readonly ILeaveTypeRepository _leaveTypeRepository;
         private readonly IAppLogger<GetLeaveTypesQueryHandler> _logger;
 
-        public GetLeaveTypesQueryHandler(IMapper mapper,
+        public GetLeaveTypesQueryHandler(
+            IMapper mapper,
             ILeaveTypeRepository leaveTypeRepository,
             IAppLogger<GetLeaveTypesQueryHandler> logger)
         {
@@ -20,15 +21,21 @@ namespace HRPlus.Application.Features.LeaveType.Queries.GetAllLeaveTypes
             this._leaveTypeRepository = leaveTypeRepository;
             this._logger = logger;
         }
+
+        /// <summary>
+        /// Handle the data for the leavetype 
+        /// </summary>
+        /// <param name="request"></param>
+        /// <param name="cancellationToken"></param>
+        /// <returns></returns>
         public async Task<List<LeaveTypeDto>> Handle(GetLeaveTypesQuery request, CancellationToken cancellationToken)
         {
-            // call the Database
+            
             var leaveTypes = await _leaveTypeRepository.GetAsync();
 
-            //convert the data object to DTO
+           
            var leaveData =  _mapper.Map<List<LeaveTypeDto>>(leaveTypes);
 
-            // return a list of DTO objects 
             _logger.LogInformation("Leave types where retve sucessfull");
             return leaveData;
         }

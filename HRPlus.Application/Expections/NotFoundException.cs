@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace HRPlus.Application.Expections
 {
-    public class NotFoundExpection : Exception
+    public class NotFoundException : Exception
     {
-        public NotFoundExpection(string name, object key) : base($"{name} ({key}) was not found)")
+        public NotFoundException(string name, object key) : base($"{name} ({key}) was not found)")
         {
 
         }

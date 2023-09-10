@@ -24,7 +24,7 @@ namespace HRPlus.Infrastructure.EmailService
             var to = new EmailAddress(email.To);
             var from = new EmailAddress
             {
-                Email = _emailSettigns.FromAdress,
+                Email = _emailSettigns.FromAddress,
                 Name  = _emailSettigns.FromName
             };
             var message = MailHelper.CreateSingleEmail(from, to, email.Subject, email.Body,email.Body);

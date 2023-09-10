@@ -11,13 +11,13 @@ namespace HRPlus.Application.Features.LeaveType.Commands.UpdateLeaveType
     public class UpdateLeaveTypeCommandValidator : AbstractValidator<UpdateLeaveTypeCommand>
     {
         private readonly ILeaveTypeRepository _leaveTypeRepository;
-        public UpdateLeaveTypeCommandValidator(ILeaveTypeRepository ILeaveTypeRepository)
+        public UpdateLeaveTypeCommandValidator(ILeaveTypeRepository leaveTypeRepository)
         {
             RuleFor(p => p.Id)
                  .NotNull()
                  .MustAsync(LeaveTypeMustExit);
 
-            RuleFor(u => u.Name)
+            RuleFor(p => p.Name)
                 .NotEmpty().WithMessage("{PropertityName} is required")
                 .NotNull();
 
@@ -29,12 +29,11 @@ namespace HRPlus.Application.Features.LeaveType.Commands.UpdateLeaveType
            .MustAsync(LeaveTypeNameUnique)
           .WithMessage("Leave type already exists");
 
-
-            this._leaveTypeRepository = ILeaveTypeRepository;
+            this._leaveTypeRepository = leaveTypeRepository;
         }
 
       
-        private async Task<bool> LeaveTypeMustExit(int id, CancellationToken token)
+        private async Task<bool> LeaveTypeMustExit(int id, CancellationToken arg)
         {
             var leaveType = await _leaveTypeRepository.GetByIdAsync(id);
             return leaveType != null;
