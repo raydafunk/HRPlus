@@ -19,7 +19,7 @@ namespace HRPlus.Application.Features.LeaveType.Commands.DeleteLeaveType
             if( LeaveTypeToDeleate == null)
                throw new NotFoundExpection(nameof(LeaveTypeToDeleate), request.Id);
 
-            await _leaveTypeRepository.DeleteAsync(LeaveTypeToDeleate.Id);
+            await _leaveTypeRepository.DeleteAsync(LeaveTypeToDeleate);
 
             return Unit.Value;
         }
