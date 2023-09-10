@@ -28,4 +28,11 @@
     <ProjectReference Include="..\HRPlus.Application\HRPlus.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\LeaveTypes\" />
+    <Folder Include="Features\LeaveAllocations\" />
+    <Folder Include="Features\LeaveRequests\" />
+    <Folder Include="Mocks\" />
+  </ItemGroup>
+
 </Project>
