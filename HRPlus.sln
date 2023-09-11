@@ -29,6 +29,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HRPlusApplicationTest", "HR
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRPlusApplication.Test", "HRPlusApplication.Test\HRPlusApplication.Test.csproj", "{A062FA15-8DC6-4557-B57E-CB4A86C47BD7}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HRPlusPresistanceIntergationTest", "HRPlusPresistanceIntergationTest", "{78352B51-FBB3-4F53-A0C6-18B783451281}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HRPlusPresistanceIntergation.Test", "HRPlusPresistanceIntergation.Test\HRPlusPresistanceIntergation.Test.csproj", "{51214644-5E1E-4F31-9A4E-1C462CEF2697}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +63,10 @@ Global
 		{A062FA15-8DC6-4557-B57E-CB4A86C47BD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A062FA15-8DC6-4557-B57E-CB4A86C47BD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A062FA15-8DC6-4557-B57E-CB4A86C47BD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51214644-5E1E-4F31-9A4E-1C462CEF2697}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51214644-5E1E-4F31-9A4E-1C462CEF2697}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51214644-5E1E-4F31-9A4E-1C462CEF2697}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51214644-5E1E-4F31-9A4E-1C462CEF2697}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -75,6 +83,8 @@ Global
 		{E20324B4-2CE5-4C15-8C16-2959C5B0A536} = {08BABA72-0215-4588-9480-F34234909436}
 		{C332E35C-9B5D-4C66-B006-FA8B7DB60438} = {32CF3B0E-8744-4DC4-A41A-503182F5B230}
 		{A062FA15-8DC6-4557-B57E-CB4A86C47BD7} = {C332E35C-9B5D-4C66-B006-FA8B7DB60438}
+		{78352B51-FBB3-4F53-A0C6-18B783451281} = {32CF3B0E-8744-4DC4-A41A-503182F5B230}
+		{51214644-5E1E-4F31-9A4E-1C462CEF2697} = {78352B51-FBB3-4F53-A0C6-18B783451281}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B39A5218-DB58-4BC0-82A4-26D0736DB2FA}
